@@ -6,29 +6,124 @@
         <title>Impekable</title>
         <meta name="description" content="This is my HTML5 boilerplate.">
 
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
+        
+
+        <script src="./js/svgxuse.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>
-            IMPEKABLE
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Invoices</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Chat Room</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </nav>
-        <h2>
-            Overview
-        </h2>
+
+        <div class="c-app">
+            <div class="c-app__logo">
+                <a href="/" class="c-logo">
+                    IMPEKABLE
+                </a>
+            </div>
+            
+            <header class="c-app__topbar">
+                Topbar
+            </header>
+
+            <aside class="c-app__sidebar">
+                <nav class="c-main-menu">
+                    <ul class="c-main-menu__list">
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_home"></use>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_dashboard"></use>
+                                </svg>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_inbox"></use>
+                                </svg>
+                                Inbox
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_products"></use>
+                                </svg>
+                                Products
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_Invoices"></use>
+                                </svg>
+                                Invoices
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_customers"></use>
+                                </svg>
+                                Customers
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_chat-room"></use>
+                                </svg>
+                                Chat Room
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_calendar"></use>
+                                </svg>
+                                Calendar
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_help-center"></use>
+                                </svg>
+                                Help Center
+                            </a>
+                        </li>
+                        <li class="c-main-menu__item">
+                            <a class="c-main-menu__link" href="#">
+                                <svg class="c-main-menu__symbol">
+                                    <use xlink:href="img/icons/symbol-defs.svg#c-icon_setting"></use>
+                                </svg>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <main class="c-app__main">
+                <h2>
+                    Overview
+                </h2>
+            </main>
+        </div>
+
+     
+
+        <!-- <svg class="icon c-icon_calendar">
+          <use xlink:href="img/icons/symbol-defs.svg#c-icon_calendar"></use>
+        </svg> -->
     </body>
 </html>

@@ -8,19 +8,31 @@
 
 :root {
     /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
+    
+    --color-alpha-x-light: #F2F2F9;
+    --color-alpha-light: #A5A4BF;
+    --color-alpha: #A3A0FB;
+    --color-alpha-dark: #4C4B68;
+    --color-alpha-x-dark: #43435D;
+    --color-alpha-xx-dark: #4D4F5C;
+    
+    
+    --color-beta: #3B86FF;
 
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
+    --color-gamma: #FF6565;
 
+    --color-neutral-light: #fff;
     /* Shadows */
+    --shadow-neutral: 0 2px 6px rgb(0,0,0,.04);
 
     /* border radius */
 
     /* transitions */
     --transition-alpha: .1s;
+
+    /* Grid */
+    --grid-sidebar-width: 260px;
+    --grid-baseline: 5px;
 }
 
 /*------------------------------------*\
@@ -34,14 +46,14 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 15px; /* = 1rem */
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
+    font-family: 'Source Sans Pro', Helvetica, arial, sans-serif;
+    color: var(--color-alpha-xx-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: var(--color-neutral-light);
 }
 
 *,
@@ -184,7 +196,7 @@ a:active {
 
 a:hover,
 a:focus {
-    color: var(--color-alpha-light);
+    color: var(--color-alpha-x-light);
 }
 
 label,
@@ -290,10 +302,103 @@ input::placeholder {
 \*------------------------------------*/
 
 /*
+    Component: App
+    ---
+    Website main app
+*/
+
+.c-app{
+    min-height: 100vh;
+}
+
+.c-app__logo{
+    background: var(--color-alpha-x-dark);
+}
+
+.c-app__topbar{
+    background: var(--color-neutral-light);
+    box-shadow: var(--shadow-neutral);
+}
+
+.c-app__sidebar{
+    background: var(--color-alpha-dark);
+}
+
+.c-app__main{
+
+}
+
+@media screen and (min-width: 65rem){
+    .c-app{
+        display: grid; /* alle items uit deze container worden hieruit gestyled */
+        grid-template-columns: var(--grid-sidebar-width) auto;
+        grid-template-rows: calc(var(--grid-baseline) * 14) auto;
+    }
+}
+
+/*
     Component: Logo
     ---
     Website main logo
 */
+
+.c-logo{
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-neutral-light);
+    line-height: 20px;
+    padding: 1rem;
+}
+
+/*
+    Component: Main menu
+    ---
+    Website main menu
+*/
+
+.c-main-menu{
+
+}
+
+.c-main-menu__list{
+    padding-left: 0;
+}
+
+.c-main-menu__item{
+    margin: var(--grid-baseline) 0;
+
+    border-left: var(--grid-baseline) solid transparent;
+}
+
+.c-main-menu__symbol{
+    height: 1rem;
+    width: 1rem;
+    margin-right: calc(var(--grid-baseline) * 2);
+    fill: var(--color-alpha-light);
+}
+
+.c-main-menu__link,
+.c-main-menu__link:active,
+.c-main-menu__link:visited{
+
+    /* Box-model */
+    display: flex;
+    align-items: center;
+    padding: calc(var(--grid-baseline) * 3) calc((var(--grid-baseline) * 4) - var(--grid-baseline));
+
+    font-size: 1rem;
+    line-height: calc(var(--grid-baseline) * 1);
+    color: var(--color-neutral-light);
+    text-decoration: none;
+
+    /* Appearance */
+    fill: var(--color-alpha-x-light);
+}
+
+.c-main-menu__link:hover{
+    background-color: var(--color-alpha-x-dark);
+}
 
 /*------------------------------------*\
 #UTILITIES
